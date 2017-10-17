@@ -21,7 +21,7 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-                <title>DSpace OAI-PMH Data Provider</title>
+                <title>UP2U DSpace OAI-PMH Data Provider</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
                 <script src="static/js/jquery.js" type="text/javascript"></script>
@@ -35,7 +35,7 @@
                 <div class="container">
                     <div class="navbar navbar-default" role="navigation">
                         <div class="navbar-header">
-                            <a class="navbar-brand" href="#">DSpace OAI-PMH Data Provider</a>
+                            <a class="navbar-brand" href="#">UP2U DSpace OAI-PMH Data Provider</a>
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
