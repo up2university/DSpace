@@ -14,7 +14,6 @@
   -    communities - Community[] all communities in DSpace
   -    recent.submissions - RecetSubmissions
   --%>
-<link type="text/css" rel="stylesheet" href="<%= request.getContextPath() %>/static/css/up2ustyle.css"/>
 <%@page import="org.dspace.core.factory.CoreServiceFactory"%>
 <%@page import="org.dspace.core.service.NewsService"%>
 <%@page import="org.dspace.content.service.CommunityService"%>
