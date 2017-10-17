@@ -32,6 +32,7 @@
   -
   -   admin_button     - If the user is an admin
   --%>
+<link type="text/css" rel="stylesheet" href="<%= request.getContextPath() %>/static/css/up2ustyle.css"/>
 
 <%@page import="org.dspace.core.Utils"%>
 <%@page import="com.coverity.security.Escape"%>
