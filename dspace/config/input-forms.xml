@@ -46,7 +46,7 @@
          <label>Authors</label>
          <input-type>name</input-type>
          <hint>Enter the names of the authors of this item.</hint>
-         <required></required>
+         <required>You must enter at least one author</required>
        </field>
 
        <field>
@@ -207,7 +207,7 @@
          <label>Description</label>
          <input-type>textarea</input-type>
          <hint>Enter any other description or comments in this box. </hint>
-         <required></required>
+         <required>You must enter a description for this Learning Object.</required>
        </field>
      </page>
    </form>
