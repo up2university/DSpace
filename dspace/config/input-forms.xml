@@ -158,7 +158,7 @@
          <label>Duration</label>
          <input-type>onebox</input-type>
          <hint>Enter the duration of the item.</hint>
-         <required>You must enter the duration for this item.</required>
+         <required></required>
        </field>
 
        <field>
