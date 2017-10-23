@@ -148,7 +148,7 @@
          <label>Type</label>
          <input-type value-pairs-name="common_types">dropdown</input-type>
          <hint>Select the type(s) of content of the item. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" key.</hint>
-         <required></required>
+         <required>You must fill the LO type</required>
        </field>
        <field>
          <dc-schema>dc</dc-schema>
@@ -169,7 +169,7 @@
          <label>Language</label>
          <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
          <hint>Select the language of the main content of the item.  If the language does not appear in the list, please select 'Other'.  If the content does not really have a language (for example, if it is a dataset or an image) please select 'N/A'.</hint>
-         <required></required>
+         <required>You must fill the LO language</required>
        </field>
      </page>
 
@@ -183,7 +183,7 @@
          <label>Subject Keywords</label>
          <input-type>twobox</input-type>
          <hint>Enter appropriate subject keywords or phrases. </hint>
-         <required></required>
+         <required>You must fill at least one keyword</required>
          <vocabulary>srsc</vocabulary>
        </field>
 
