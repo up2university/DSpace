@@ -103,6 +103,7 @@
          <label>Citation</label>
          <input-type>onebox</input-type>
          <hint>Enter the standard citation for the previously issued instance of this item.</hint>
+         <required></required>
        </field>
 
        <field>
@@ -126,8 +127,7 @@
          <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
          <hint>If the item has any identification numbers or codes associated with
 it, please enter the types and the actual numbers or codes.</hint>
-         <required>You must enter a valid LO URL.</required>
-
+         <required></required>
        </field>
 
        <field>
@@ -244,30 +244,30 @@ it, please enter the types and the actual numbers or codes.</hint>
 
  <form-value-pairs>
    <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
-<!--      <pair> -->
-<!--        <displayed-value>ISSN</displayed-value> -->
-<!--        <stored-value>issn</stored-value> -->
-<!--      </pair> -->
-<!--      <pair> -->
-<!--        <displayed-value>Other</displayed-value> -->
-<!--        <stored-value>other</stored-value> -->
-<!--      </pair> -->
-<!--      <pair> -->
-<!--        <displayed-value>ISMN</displayed-value> -->
-<!--        <stored-value>ismn</stored-value> -->
-<!--      </pair> -->
-<!--      <pair> -->
-<!--        <displayed-value>Gov't Doc #</displayed-value> -->
-<!--        <stored-value>govdoc</stored-value> -->
-<!--      </pair> -->
+     <pair>
+       <displayed-value>ISSN</displayed-value>
+       <stored-value>issn</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Other</displayed-value>
+       <stored-value>other</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>ISMN</displayed-value>
+       <stored-value>ismn</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Gov't Doc #</displayed-value>
+       <stored-value>govdoc</stored-value>
+     </pair>
      <pair>
        <displayed-value>URI</displayed-value>
        <stored-value>uri</stored-value>
      </pair>
-<!--      <pair> -->
-<!--        <displayed-value>ISBN</displayed-value> -->
-<!--        <stored-value>isbn</stored-value> -->
-<!--      </pair> -->
+     <pair>
+       <displayed-value>ISBN</displayed-value>
+       <stored-value>isbn</stored-value>
+     </pair>
    </value-pairs>
 
    <value-pairs value-pairs-name="common_types" dc-term="type">
