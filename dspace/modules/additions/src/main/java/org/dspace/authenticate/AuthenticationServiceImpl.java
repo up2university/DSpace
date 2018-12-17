@@ -120,8 +120,10 @@ public class AuthenticationServiceImpl implements AuthenticationService
                     EPerson me = context.getCurrentUser();
                     me.setLastActive(new Date());
                     try {
-                    	LrsUtils.sendLoginStatement(ePersonService.findByEmail(context,username).getID().toString(),username);
-                    	log.info("send login statement");
+                    	if(ePersonService.findByEmail(context,username)!=null) {
+	                    	LrsUtils.sendLoginStatement(ePersonService.findByEmail(context,username).getID().toString(),username);
+	                    	log.info("send login statement");
+                    	}
                         ePersonService.update(context, me);
                     } catch (SQLException ex) {
                         log.error("Could not update last-active stamp", ex);
