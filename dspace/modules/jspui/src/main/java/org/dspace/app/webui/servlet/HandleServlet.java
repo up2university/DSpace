@@ -239,9 +239,10 @@ public class HandleServlet extends DSpaceServlet
             {
                 Item item = (Item) dso;
                 
-                /*Send statement to lrs*/
+                /*Send statement to LRS*/
+                if(context.getCurrentUser()!=null) {
                 LrsUtils.sendAccessedItemStatement(context.getCurrentUser().getID().toString(), context.getCurrentUser().getEmail(),item.getOwningCollection().getName(),item.getOwningCollection().getID().toString(),item.getID().toString());
-
+                }
                 // Only use last-modified if this is an anonymous access
                 // - caching content that may be generated under authorisation
                 //   is a security problem

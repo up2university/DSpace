@@ -291,7 +291,7 @@ public class DiscoverySearchRequestProcessor implements SearchRequestProcessor
         /*Send statement to LRS*/
         if(context.getCurrentUser()!=null) {
         	String username=context.getCurrentUser().getEmail();
-        	 StringBuilder requestURL = new StringBuilder(request.getRequestURL().toString());
+        	StringBuilder requestURL = new StringBuilder(request.getRequestURL().toString());
         	String queryString = request.getQueryString();
         	LrsUtils.sendSearchQueryStatement(context.getCurrentUser().getID().toString(),username, requestURL.append('?').append(queryString).toString());
         }

@@ -232,8 +232,8 @@ public class ShibAuthentication implements AuthenticationMethod
 
 			log.info(eperson.getEmail()+" has been authenticated via shibboleth..");
 			if(eperson.getEmail()!=null) {
-            	LrsUtils.sendLoginStatement(eperson.getID().toString(),username);
-            	log.info("send login statement"+eperson.getID()+"--"+username);
+            	LrsUtils.sendLoginStatement(eperson.getID().toString(),eperson.getEmail());
+            	log.info("send login statement"+eperson.getID()+"--"+eperson.getEmail());
         	}
 			return AuthenticationMethod.SUCCESS;
 
