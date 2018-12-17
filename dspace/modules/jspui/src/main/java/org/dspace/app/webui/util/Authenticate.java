@@ -352,8 +352,8 @@ public class Authenticate
     	initialize();
     	
         HttpSession session = request.getSession();
-
-        LrsUtils.sendLogoutStatement( context.getCurrentUser().getID().toString(),context.getCurrentUser().getEmail());
+        if(context.getCurrentUser()!=null)//may clean cookies from browser
+        	LrsUtils.sendLogoutStatement( context.getCurrentUser().getID().toString(),context.getCurrentUser().getEmail());
         context.setCurrentUser(null);
         request.removeAttribute("is.admin");
         request.removeAttribute("dspace.current.user");
