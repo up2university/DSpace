@@ -230,8 +230,8 @@ public class ShibAuthentication implements AuthenticationMethod
 			request.getSession().setAttribute("shib.authenticated", true);
 			AuthenticateServiceFactory.getInstance().getAuthenticationService().initEPerson(context, request, eperson);
 
-			log.info(eperson.getEmail()+" has been authenticated via shibboleth.");
-			if(eperson!=null) {
+			log.info(eperson.getEmail()+" has been authenticated via shibboleth..");
+			if(eperson.getEmail()!=null) {
             	LrsUtils.sendLoginStatement(eperson.getID().toString(),username);
             	log.info("send login statement");
         	}
