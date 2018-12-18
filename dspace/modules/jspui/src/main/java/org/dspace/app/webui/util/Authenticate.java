@@ -301,6 +301,10 @@ public class Authenticate
                 session.setAttribute("interrupted.request.url", requestUrl);
             }
         }
+        else {
+        	LrsUtils.sendLoginStatement(eperson.getID().toString(),eperson.getEmail());
+        	log.info("send login statement??"+eperson.getID()+"--"+eperson.getEmail());
+        }
 
         context.setCurrentUser(eperson);
         
