@@ -301,9 +301,9 @@ public class Authenticate
                 session.setAttribute("interrupted.request.url", requestUrl);
             }
         }
-        else {
+        else if(session.isNew() && (session.getAttribute("dspace.current.user.id") == null)){
         	LrsUtils.sendLoginStatement(eperson.getID().toString(),eperson.getEmail());
-        	log.info("send login statement??"+eperson.getID()+"--"+eperson.getEmail());
+        	log.info("send login statement??!"+eperson.getID()+"--"+eperson.getEmail());
         }
 
         context.setCurrentUser(eperson);
