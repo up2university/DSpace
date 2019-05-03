@@ -253,6 +253,16 @@ public final class LrsUtils {
 			statement.setVerb(verb);
 			statement.setObject(activity);
 			
+			//New Context
+			 Context context = new Context();
+			 context.setPlatform("DSpace");
+		     context.setRegistration(UUID.randomUUID());
+		     StatementRef statementRef = new StatementRef(UUID.randomUUID());
+		     context.setContextActivities(new ContextActivities());
+		     context.setStatement(statementRef);
+		     
+		     statement.setContext(context);
+			
 			log.info(statement.getActor().getName());
 			StatementLRSResponse lrsRes = lrs.saveStatement(statement);
 			log.info(lrsRes.getErrMsg()+lrsRes.getSuccess());
@@ -315,6 +325,7 @@ public final class LrsUtils {
 	}
 	public static Context createContext(String collectionId,String collectionTitle) {
 	 Context context = new Context();
+	 context.setPlatform("DSpace");
      context.setRegistration(UUID.randomUUID());
      StatementRef statementRef = new StatementRef(UUID.randomUUID());
      context.setContextActivities(new ContextActivities());
