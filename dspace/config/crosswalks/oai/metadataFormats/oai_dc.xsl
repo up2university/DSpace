@@ -87,7 +87,16 @@
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='identifier']/doc:element/doc:element/doc:field[@name='value']">
 				<dc:identifier><xsl:value-of select="." /></dc:identifier>
 			</xsl:for-each>
-			<!-- dc.language -->
+			<xsl:for-each select="doc:metadata/doc:element[@name='bundles']/doc:element[@name='bundle']">
+                                       <xsl:if test="doc:field[@name='name']/text() = 'ORIGINAL'">
+                                               <xsl:for-each select="doc:element[@name='bitstreams']/doc:element">
+                                                       <dc:identifier>                                                      
+                                                                               <xsl:value-of select="doc:field[@name='url']/text()"></xsl:value-of>
+                                                       </dc:identifier>
+                                               </xsl:for-each>
+                                       </xsl:if>
+                        </xsl:for-each>
+				<!-- dc.language -->
 			<xsl:for-each select="doc:metadata/doc:element[@name='dc']/doc:element[@name='language']/doc:element/doc:field[@name='value']">
 				<dc:language><xsl:value-of select="." /></dc:language>
 			</xsl:for-each>
