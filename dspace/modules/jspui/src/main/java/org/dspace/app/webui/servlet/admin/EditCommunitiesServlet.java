@@ -731,7 +731,7 @@ public class EditCommunitiesServlet extends DSpaceServlet
 		String contentSource = request.getParameter("source");
 
 		// First, if this is not a harvested collection (anymore), set the harvest type to 0; wipe harvest settings  
-		if (contentSource!=null || contentSource.equals("source_normal")) 
+		if (contentSource==null || contentSource.equals("source_normal")) 
 		{
 			if (hc != null)
             {
